@@ -11,6 +11,7 @@ This application can do the following things:
 
 # How to use
 ## How to run
+Before running the program, please excute the *./scripts/MySQLDB.sql* file to generate the table.
 You can run the *start.sh* in *"./out/start/sh"*
 ```markdown
 bash out/start.sh
