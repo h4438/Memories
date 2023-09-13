@@ -78,8 +78,14 @@ public class App implements Callable<Integer> {
 
     public static Connection connectMySQL(){
         try{
-            String mysqlUrl = "jdbc:mysql://localhost:3306/keynotes";
-            Connection connection = DriverManager.getConnection(mysqlUrl, "root", "root");
+            String user = System.getenv("user");
+            String password = System.getenv("password");
+            String url = System.getenv("url");
+            String db = System.getenv("db");
+            StringBuilder builder = new StringBuilder("jdbc:mysql://");
+            builder.append(url).append("/").append(db);
+            String mysqlUrl = builder.toString();
+            Connection connection = DriverManager.getConnection(mysqlUrl, user, password);
             System.out.println("MySQL connected");
             return connection;
         }
