@@ -62,4 +62,4 @@ edit -n mynote.md save
 
 # Use case diagram
 Here is an overview of the app
-![Use Case diagram]("./assests/use_case.png")
+![Use Case diagram](./assests/use_case.png)
